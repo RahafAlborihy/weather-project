@@ -1,0 +1,8 @@
+[03-Dec-2025 19:48:14 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method WeatherEntry::getHumidity() in C:\xampp\htdocs\weather_project\index.php:203
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\weather_project\index.php on line 203
+[03-Dec-2025 19:48:22 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method WeatherEntry::getHumidity() in C:\xampp\htdocs\weather_project\index.php:203
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\weather_project\index.php on line 203

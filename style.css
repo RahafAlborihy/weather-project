@@ -1,0 +1,138 @@
+/* ملف style.css - تصميم أكثر جمالية */
+body {
+    font-family: 'Cairo', sans-serif; /* استخدام الخط العربي الجديد */
+    background: linear-gradient(135deg, #74a0e7 0%, #a4c4f9 100%); /* خلفية متدرجة */
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #333;
+}
+.container {
+    max-width: 550px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.95); /* خلفية بيضاء شفافة قليلاً */
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* ظل عميق وجميل */
+    text-align: right;
+    transition: all 0.5s ease;
+}
+h1 {
+    color: #007bff;
+    border-bottom: 3px solid #007bff;
+    padding-bottom: 15px;
+    margin-bottom: 40px;
+    text-align: center;
+    font-size: 28px;
+}
+h1 i {
+    margin-left: 10px;
+    color: #ffc107; /* لون أيقونة الشمس */
+}
+.form-group {
+    margin-bottom: 30px;
+}
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 700;
+    color: #495057;
+    font-size: 18px;
+}
+select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 16px;
+    background-color: #f8f9fa;
+    transition: border-color 0.3s;
+}
+select:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+button {
+    background-color: #28a745; 
+    color: white;
+    padding: 14px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    width: 100%;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+button:hover {
+    background-color: #218838;
+    transform: translateY(-2px); /* تأثير رفع خفيف */
+}
+button i {
+    margin-left: 8px;
+}
+.alert {
+    padding: 15px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 700;
+}
+.hidden {
+    display: none;
+}
+.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+.weather-result {
+    margin-top: 40px;
+    padding: 20px;
+    border: 1px solid #007bff;
+    border-radius: 10px;
+    background-color: #f0f7ff;
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.1);
+    text-align: right;
+}
+.weather-result h2 {
+    color: #007bff;
+    margin-bottom: 20px;
+    font-size: 24px;
+    text-align: center;
+}
+.weather-details p {
+    margin: 15px 0;
+    font-size: 18px;
+    border-bottom: 1px dotted #a6c3e7;
+    padding-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+.weather-details p:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+.weather-result strong {
+    display: inline-block;
+    width: 150px;
+    color: #343a40;
+    font-weight: 600;
+}
+.weather-result span {
+    font-weight: 700;
+    color: #dc3545; /* لون النتائج (قيمة الطقس) */
+}
+.weather-details i {
+    margin-left: 10px;
+    color: #007bff;
+}
