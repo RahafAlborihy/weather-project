@@ -136,3 +136,25 @@ button i {
     margin-left: 10px;
     color: #007bff;
 }
+.logout-box {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 8px 15px;
+    border-radius: 8px;
+    font-size: 15px;
+    color: #333;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+.logout-btn {
+    color: #d9534f;
+    font-weight: bold;
+    margin-right: 8px;
+    text-decoration: none;
+}
+
+.logout-btn:hover {
+    text-decoration: underline;
+}

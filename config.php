@@ -1,9 +1,18 @@
-<?php
 
+<?php
+// تفعيل تسجيل الأخطاء
+ini_set('display_errors', 0);
+ini_set('log_errors', 1);
+ini_set('error_log', __DIR__ . '/php-errors.log');
+error_reporting(E_ALL);
+
+
+
+// معلومات الاتصال بقاعدة البيانات
 define('DB_HOST', 'localhost');
-define('DB_NAME', 'weather_db'); 
-define('DB_USER', 'weather_user'); 
-define('DB_PASS', '12345');    
+define('DB_NAME', 'weather_db');
+define('DB_USER', 'root');
+define('DB_PASS', '');
 
 try {
     // بناء اتصال جديد

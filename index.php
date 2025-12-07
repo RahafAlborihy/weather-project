@@ -1,15 +1,19 @@
 <?php
+session_start();             // تفعيل الجلسات
+require_once 'config.php';   // اتصال PDO
+
+// 🚨 حماية الصفحة: لو المستخدم غير مسجل دخول → رجعيه login.php
+if (!isset($_SESSION['user_id'])) {
+    header("Location: login.php");
+    exit();
+}
+
 
 // 🔧 تفعيل نظام الإبلاغ عن الأخطاء (من محاضرة 5)
 error_reporting(E_ALL);           // إظهار كل أنواع الأخطاء للتحليل
 ini_set('display_errors', 0);     // لا تعرض الأخطاء للمستخدم
 ini_set('log_errors', 1);         // فعّل تسجيل الأخطاء في ملف لوق
 ini_set('error_log', __DIR__ . '/php-errors.log'); // مكان ملف تسجيل الأخطاء
-
-require_once 'config.php';   // اتصال PDO
-session_start();             // تفعيل الجلسات
-
-
 $cities = [
     "Sanaa"      => "صنعاء",
     "Aden"       => "عدن",
@@ -99,6 +103,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                 $currentWeather = new WeatherEntry($cityArabic, $temp, $humidity, $desc);
 
+                            
+        
+
 
                 // 5) حفظ نتيجة الطقس داخل SESSION
                 $_SESSION['last_weather'] = [
@@ -144,6 +151,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </head>
 
 <body>
+
+  <div class="logout-box">
+    مرحبًا، <?= $_SESSION['username']; ?> 
+    <a href="logout.php" class="logout-btn">تسجيل خروج</a>
+</div>
+
 <div class="container">
 
     <h1><i class="fas fa-cloud-sun"></i> حالة الطقس لمحافظات اليمن</h1>

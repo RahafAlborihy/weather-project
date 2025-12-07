@@ -6,3 +6,7 @@ Stack trace:
 Stack trace:
 #0 {main}
   thrown in C:\xampp\htdocs\weather_project\index.php on line 203
+[07-Dec-2025 01:04:18 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined function testFunctionNotExist() in C:\xampp\htdocs\weather_project\index.php:4
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\weather_project\index.php on line 4
